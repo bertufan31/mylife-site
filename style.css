@@ -1,0 +1,35 @@
+:root {
+  --bg: #f5f5f7; --card: #ffffff; --text: #1d1d1f; --muted: #6e6e73; --line: #e5e5ea;
+  --accent: #5b3fe0; --food: #eb4d26; --partner: #e3336c; --names: #2e6bf0; --watch: #0f9b89;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #000000; --card: #1c1c1e; --text: #f5f5f7; --muted: #98989d; --line: #38383a; --accent: #8f7bff; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+header img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+header .t { font-size: 30px; font-weight: 700; letter-spacing: -.5px; line-height: 1.15; }
+header .s { color: var(--muted); font-size: 16px; }
+h2 { font-size: 22px; letter-spacing: -.3px; margin: 34px 0 10px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+.card { background: var(--card); border-radius: 20px; padding: 20px 22px; margin: 14px 0; }
+.card h3:first-child { margin-top: 0; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; margin: 6px 0 24px; font-weight: 600; }
+.modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 18px 0; }
+.modules .card { margin: 0; }
+.modules b { display: block; font-size: 17px; margin-bottom: 4px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
+footer { margin-top: 48px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 18px; }
+code { background: var(--line); border-radius: 6px; padding: 1px 6px; font-size: 15px; }
